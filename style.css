@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  body {
+    background: #000000;
+    color: #333;
+    height: 3000px;
+  }
+
+#login{
+    background: #602bb0;
+    color: #fff;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 109px;
+    text-decoration: none;
+}
+
+#login:hover{
+    background-color: #9e02e7;
+}
+
+#gab{
+    color: #edf2f7;
+    align-content: end;
+    margin: 10px;
+    text-decoration: none;
+    
+}
+  header {
+    background: #000000;
+    color: #fff;
+    padding: 20px 40px;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  #hero2{
+    background: linear-gradient(90deg, #9e02e7, #ffcf0e);
+    border-radius: 22px;
+    display: flex;
+    margin: 5%;
+  }
+  .hero {
+    padding: 70px 20px;
+    background-color:#171834;
+    margin: 9px;
+    border-radius: 22px;
+    width: 100%;
+    background-image: url(./img/Atlas.png);
+    background-size: contain;       /* ou "cover", dependendo do efeito que quer */
+     background-repeat: no-repeat;   /* evita que a imagem se repita */
+    background-position: 900px; 
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  .hero button {
+    background: #602bb0;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .hero button:hover {
+    background: linear-gradient(90deg, #9e02e7, #ffcf0e);
+  }
+
+  footer {
+    background: #edf2f7;
+    color: #666;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+  }
+
+.card{
+    padding: 20px;
+    margin: 66px;
+    background-color: #9e02e7;
+    border-radius: 10px;
+    
+}
+
+.card1{
+    padding: 20px;
+    margin: 66px;
+    background-color: #9e02e7;
+    border-radius: 10px;
+}
+
+.card2{
+    padding: 20px;
+    margin: 66px;
+    background-color: #9e02e7;
+    border-radius: 10px;
+}
+
+  /* Botão legal */
+  .filter-switch {
+    border: 2px solid #ffc000;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .filter-switch input {
+    display: none;
+  }
+  
+  .filter-switch label {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.5s;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  
+  .filter-switch .background {
+    position: absolute;
+    width: 24%; /* agora é 1/4 do container */
+    height: 38px;
+    background-color: #ffc000;
+    top: 4px;
+    left: 2%;
+    border-radius: 30px;
+    transition: left 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 0;
+  }
+  
+  #option1:checked ~ .background {
+    left: 2%;
+  }
+  #option2:checked ~ .background {
+    left: 26%;
+  }
+  #option3:checked ~ .background {
+    left: 50%;
+  }
+  #option4:checked ~ .background {
+    left: 74%;
+  }
+  
+  #option1:checked + label[for="option1"],
+  #option2:checked + label[for="option2"],
+  #option3:checked + label[for="option3"],
+  #option4:checked + label[for="option4"] {
+    color: #212121;
+    font-weight: bold;
+  }
+  
+  #option1:not(:checked) + label[for="option1"],
+  #option2:not(:checked) + label[for="option2"],
+  #option3:not(:checked) + label[for="option3"],
+  #option4:not(:checked) + label[for="option4"] {
+    color: #7d7d7d;
+  }  
+  /* final do botão legal  */
+
+  .carousel-css {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  
+  .carousel-css input {
+    display: none;
+  }
+  
+  .carousel-slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease;
+  }
+  
+  .slide {
+    width: 100%;
+    flex-shrink: 0;
+  }
+  
+  .slide img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  #slide1:checked ~ .carousel-slides {
+    transform: translateX(0%);
+  }
+  #slide2:checked ~ .carousel-slides {
+    transform: translateX(-100%);
+  }
+  #slide3:checked ~ .carousel-slides {
+    transform: translateX(-200%);
+  }
+  
+  .carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .carousel-nav label {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  #slide1:checked ~ .carousel-nav label[for="slide1"],
+  #slide2:checked ~ .carousel-nav label[for="slide2"],
+  #slide3:checked ~ .carousel-nav label[for="slide3"] {
+    background-color: #ffc000;
+  }
+  
